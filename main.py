@@ -1,9 +1,13 @@
 from telebot import TeleBot,types
 from telebot.types import ReplyKeyboardMarkup,KeyboardButton,ReplyKeyboardRemove
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 user_date = {}
 
-bot = TeleBot(token = "7213222946:AAERACrtQsfePfY6pO4ujsV_KgWK24oCgKk")
+bot = TeleBot(token = "BOT_TOKEN")
 
 @bot.message_handler(commands =["start"] )
 def boshlanishi(message:types.Message):
